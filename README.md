@@ -1,4 +1,14 @@
-This is a simple Python algorithm designed to scan your computer for .exe files, which are one of the most common sources of malware, and compare the results to a database of known malware extracted from "https://bazaar.abuse.ch/" on 03/02/2024. The algorithm works in two main stages. First, it reads a CSV file (full.csv), extracts unique executable names, and saves them in newlistmalware.txt to create the malware database. In the second stage, it scans a specified directory (default is C:/) for executable files, compares them against the malware database, identifies potential threats, and saves these threats in Possiblethreats.txt. While the script aims to detect dangerous .exe files, it may flag legitimate files that behave similarly to malware, as malware is often disguised as legitimate software. Therefore, it is recommended to further investigate flagged files to determine if they are indeed safe and legitimate.The script is accompanied by a .exe file for running the detection algorithm without installing Python.
+This was my first coding project, and is a basic file-based ‘malware scanner’. The idea is to automate a very simple scanner for Windows Operating systems using Python. In short, the algorith reads a list of known malware names (specifically ‘.exe’ files) from a ‘.csv’ file, compiles these into a malware signature list, and scans the local computer’s file system for matching ‘.exe’ files. Any matches are flagged as potential threats and logged in an output ‘.txt’ file. To run the algorithm in devices that do not have Python installed, I created an ‘.exe’ file using PyInstaller that is also stored at it’s GitHub repository.
+
+I am aware that this is a very basic algorithm with many shortcomings, such as:
+
+The unreliability of using file names to detect malware. Furthermore, not every malware is a ‘.exe’ file, as even fileless malware exists.
+
+The amount of false positives derived from ‘.exe’ malicious files trying to masquarade as legitimate files.
+
+The lack of independance from the ‘.csv’ database.
+
+In the future I plan to address each point by either transforming this simple Python code into a Deep Learning model that can “learn” to identify more malware characteristics to predict very accurately if the scanned files of all types are possible malware; even if there is no database present, as the model would already trained and ready to deploy.
 
 To investigate if they are actually safe and legitimate:
 
