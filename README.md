@@ -33,3 +33,7 @@ IMPORTANT: This is not an "antivirus" and it doesn't replace their use or the us
 
 Ret'urcye mhi, vod!
 -El Científico del Gol
+
+License
+
+This project is licensed under the MIT License. 
