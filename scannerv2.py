@@ -22,7 +22,7 @@ def scan():
             exe=line.rsplit('"',1)[-1].strip()
             unique_exes.add(exe)
 
-    log_message('Update','Threat names identified!')
+    log_message('Threat names identified!')
 
 #print('Extracting them in a txt file...')
 
@@ -35,7 +35,7 @@ def scan():
     path='C:/'
     pathfinder=os.fsencode(path)
 
-    log_message('Update','Scanning computer...')
+    log_message('Scanning computer...')
 
     exelist=list()
     for dirpath, dirnames, filenames in os.walk(path):
